@@ -1,3 +1,16 @@
+# v0.0.6 (Mon Nov 06 2023)
+
+#### ⚠️ Pushed to `main`
+
+- fix: fix key collision ([@travor20814](https://github.com/travor20814))
+- chore: update README.md ([@travor20814](https://github.com/travor20814))
+
+#### Authors: 1
+
+- 李國均 ([@travor20814](https://github.com/travor20814))
+
+---
+
 # v0.0.5 (Mon Nov 06 2023)
 
 #### ⚠️ Pushed to `main`
