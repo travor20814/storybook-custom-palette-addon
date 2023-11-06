@@ -1,4 +1,5 @@
-# Storybook Addon storybook-custom-palette-addon
+# Storybook Addon storybook-rytass-palette
+
 Allow customize storybook global css variables
 
 ### Development scripts

@@ -1,13 +1,15 @@
 import type { Renderer, PartialStoryFn as StoryFunction, StoryContext } from '@storybook/types';
 import { useEffect, useGlobals, useMemo } from '@storybook/preview-api';
-import { PRIMARY_COLOR_KEY, SECONDARY_COLOR_KEY } from './constants';
+import { PALETTE } from './constants';
 
 export const withGlobals = (StoryFn: StoryFunction<Renderer>, context: StoryContext<Renderer>) => {
   const [globals] = useGlobals();
   const palette = useMemo(() => ({
-    primary: globals[PRIMARY_COLOR_KEY],
-    secondary: globals[SECONDARY_COLOR_KEY],
-  }), [globals[PRIMARY_COLOR_KEY], globals[SECONDARY_COLOR_KEY]]);
+    ...Object.entries(PALETTE.primary).reduce((result, [key, value]) => ({
+      ...result,
+      [`primary-${key}`]: { value: globals[value.key], cssVariable: value.variable }
+    }), {} as Record<string, { value: string; cssVariable: string }>),
+  }), [globals]);
 
   useEffect(() => {
     const selector = '#storybook-root';
@@ -15,8 +17,9 @@ export const withGlobals = (StoryFn: StoryFunction<Renderer>, context: StoryCont
     const firstRoot = rootElements[0] as HTMLDivElement;
 
     if (firstRoot) {
-      firstRoot.style.setProperty(`${PRIMARY_COLOR_KEY}`, palette.primary);
-      firstRoot.style.setProperty(`${SECONDARY_COLOR_KEY}`, palette.secondary);
+      Object.entries(palette).forEach(([_, v]) => {
+        firstRoot.style.setProperty(v.cssVariable, v.value);
+      });
     }
   }, [palette]);
 

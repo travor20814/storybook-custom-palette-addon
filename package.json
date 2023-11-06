@@ -1,5 +1,5 @@
 {
-  "name": "storybook-custom-palette-addon",
+  "name": "storybook-rytass-palette",
   "version": "0.0.0",
   "description": "Allow customize storybook global css variables",
   "keywords": [
@@ -106,7 +106,7 @@
     "access": "public"
   },
   "storybook": {
-    "displayName": "storybook-custom-palette-addon",
+    "displayName": "storybook-rytass-palette",
     "supportedFrameworks": [
       "react"
     ],
