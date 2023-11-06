@@ -30,12 +30,12 @@ type Schema = Record<
 >;
 
 function generatePaletteName(scope: MainScope) {
-  const mainKey = `${scope.substring(0, 1)}m`;
-  const lightKey = `${scope.substring(0, 1)}l`;
-  const darkKey = `${scope.substring(0, 1)}d`;
-  const onKey = `${scope.substring(0, 1)}o`;
-  const hoverKey = `${scope.substring(0, 1)}h`;
-  const activeKey = `${scope.substring(0, 1)}a`;
+  const mainKey = `${scope.substring(0, 2)}m`;
+  const lightKey = `${scope.substring(0, 2)}l`;
+  const darkKey = `${scope.substring(0, 2)}d`;
+  const onKey = `${scope.substring(0, 2)}o`;
+  const hoverKey = `${scope.substring(0, 2)}h`;
+  const activeKey = `${scope.substring(0, 2)}a`;
 
   return {
     [scope]: {
