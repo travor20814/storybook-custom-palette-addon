@@ -1,3 +1,15 @@
+# v0.0.7 (Wed Aug 14 2024)
+
+#### ⚠️ Pushed to `main`
+
+- build: support for storybook v8 ([@travor20814](https://github.com/travor20814))
+
+#### Authors: 1
+
+- 李國均 ([@travor20814](https://github.com/travor20814))
+
+---
+
 # v0.0.6 (Mon Nov 06 2023)
 
 #### ⚠️ Pushed to `main`
