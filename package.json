@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/travor20814/storybook-custom-palette-addon"
+    "url": "git+https://github.com/travor20814/storybook-custom-palette-addon.git"
   },
   "author": "Travor Lee <travor20814@gmail.com>",
   "license": "MIT",
