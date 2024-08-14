@@ -2,7 +2,6 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { styled } from '@storybook/theming';
 import { useGlobals } from '@storybook/manager-api';
 import InputColor from 'react-input-color';
-import { PALETTE } from '../constants';
 import { hex6ToHex8 } from '../utils';
 import { usePreviousValue } from '../hooks';
 
